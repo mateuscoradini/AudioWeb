@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="common" template="/WEB-INF/layouts/classic.jsp">
+		<put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+		<put-attribute name="current" value="index"></put-attribute>
+	</definition>
+
+	<definition name="index" extends="common">
+		<put-attribute name="title" value="Privates Audio Web" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="current" value="index"></put-attribute>
+	</definition>
+
+
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="current" value="login" />
+	</definition>
+	
+	<definition name="register-form" extends="common">
+		<put-attribute name="title" value="Register" />
+		<put-attribute name="body" value="/WEB-INF/jsp/register-form.jsp" />
+		<put-attribute name="current" value="register" />
+	</definition>
+
+	<definition name="common2" template="/WEB-INF/layouts/classic2.jsp">
+		<put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+		<put-attribute name="current" value="index"></put-attribute>
+	</definition>
+
+
+	<definition name="logged" extends="common2">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/logged.jsp" />
+		<put-attribute name="current" value="index"></put-attribute>
+	</definition>
+	
+	<definition name="user-audio" extends="common">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/users/user-audio.jsp" />
+		<put-attribute name="current" value="index"></put-attribute>
+	</definition>
+
+
+
+	<definition name="users" extends="common2">
+		<put-attribute name="title" value="Users" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+		<put-attribute name="current" value="users"></put-attribute>
+	</definition>
+
+	<definition name="user-detail" extends="common2">
+		<put-attribute name="title" value="Users Detail" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-detail.jsp" />
+		<put-attribute name="current" value="users"></put-attribute>
+	</definition>
+
+	<definition name="user-details-form" extends="common2">
+		<put-attribute name="title" value="Users / Permissions" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/users/user-details-form.jsp" />
+		<put-attribute name="current" value="users"></put-attribute>
+	</definition>
+	
+	<definition name="user-requests-form" extends="common2">
+		<put-attribute name="title" value="Users Request's" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/users/user-requests-form.jsp" />
+		<put-attribute name="current" value="users"></put-attribute>
+	</definition>
+
+
+	<definition name="project-register-form" extends="common2">
+		<put-attribute name="title" value="Projects / Audio Files" />
+		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/projects/project-register-form.jsp" />
+		<put-attribute name="current" value="projects"></put-attribute>
+
+	</definition>
+
+
+
+</tiles-definitions>
